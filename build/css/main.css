@@ -9,7 +9,6 @@ body {
     letter-spacing: .01rem;
 }
 
-
 /* header */
 h1 h3 h4 h5 h6 {
     font-family: "Open Sans", sans-serif;
@@ -19,6 +18,7 @@ h2 {
     font-family: "Merriweather", sans-serif;
 }
 .main-header {
+        /* grid-area: header; */
         background: #F5F8FA;
         padding: 32px;
         border-bottom-style: solid;
@@ -49,6 +49,7 @@ h2 {
 
 /* nav */
 .navbar {
+    /* grid-area: nav; */
     font-size: 18px;
     padding-bottom: 10px;   
 }
@@ -98,7 +99,48 @@ h2 {
 
 @media screen and (min-width: 700px) {
 
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "nav nav"
+                         "header header"
+                         "content side"
+                         "footer footer"; 
+    font-family: "Merriweather", sans-serif;
+    letter-spacing: .01rem;
+}
+
+
+main {
+    grid-area: content;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0,0,0,.125);
+}
+
+aside {
+    grid-area: side;
+    padding: 2rem;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0,0,0,.125);
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
     .main-header {
+        grid-area: header;
         background: #F5F8FA;
         padding: 32px;
         border-bottom-style: solid;
@@ -114,6 +156,7 @@ h2 {
 
     /* nav */
     .navbar {
+        grid-area: nav;
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
