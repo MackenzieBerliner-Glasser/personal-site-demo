@@ -97,9 +97,43 @@ h2 {
     border-bottom-color: rgba(0,0,0,.125);
 }
 
+.project-footer {
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgba(0,0,0,.125);
+
+}
+
+.project-image {
+    max-width: 100%;
+}
+
 @media screen and (min-width: 700px) {
 
-body {
+.project-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "nav nav"
+                         "header header"
+                         "content content"
+                         "footer footer"; 
+}
+
+.project-main {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin: 0;
+    padding: 0;
+}
+    .project-main .project-image {
+        height: 200px;
+        width: 200px;
+    }
+.home-body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "nav nav"
@@ -110,8 +144,7 @@ body {
     letter-spacing: .01rem;
 }
 
-
-main {
+.home-main {
     grid-area: content;
     padding: 2rem;
     margin-left: auto;
@@ -151,8 +184,6 @@ footer {
         .main-header .center {
             text-align: center;
         }
-
-
 
     /* nav */
     .navbar {
