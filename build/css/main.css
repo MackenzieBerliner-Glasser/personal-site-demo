@@ -97,6 +97,52 @@ h2 {
     border-bottom-color: rgba(0,0,0,.125);
 }
 
+.project-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.project-main .project-card{
+        display: grid;
+        box-shadow: 0px 1px 5px #555;
+        background-color: #F5F8FA;
+    }
+
+.project-main .project-card-title {
+        text-align: center;
+        font-size: 2rem;
+        padding: .5rem;
+    }
+
+.project-main .project-image {
+        margin: auto;
+        height: 150px;
+        width: 150px;
+    }
+
+.project-main .project-card-description {
+        text-align: center;
+        padding: .5rem;
+        line-height: 1.6em;
+    }
+
+.project-main .project-card-button {
+        display: block;
+        background-color: #0096CC;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        transition: .3s ease-out;
+
+    }
+
+.project-main .project-card-button:hover {
+            background-color: darken(#0096CC, 30%);
+        }
+
 .project-footer {
     margin-top: 30px;
     margin-left: 5px;
@@ -107,12 +153,8 @@ h2 {
 
 }
 
-.project-image {
-    max-width: 100%;
-}
-
 @media screen and (min-width: 700px) {
-
+/* project page */
 .project-body {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -126,13 +168,46 @@ h2 {
     grid-area: content;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    margin: 0;
-    padding: 0;
+    grid-gap: 1rem;
+    padding: 1rem;
 }
-    .project-main .project-image {
-        height: 200px;
-        width: 200px;
+
+    .project-main .project-card{
+        display: grid;
+        box-shadow: 0px 1px 5px #555;
+        background-color: #F5F8FA;
     }
+    
+    .project-main .project-card-title {
+        font-size: 2rem;
+        padding: .5rem;
+    }
+
+    .project-main .project-image {
+        height: 150px;
+        width: 150px;;
+    }
+
+    .project-main .project-card-description {
+        padding: .5rem;
+        line-height: 1.6em;
+    }
+
+    .project-main .project-card-button {
+        display: block;
+        background-color: #0096CC;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        transition: .3s ease-out;
+
+    }
+        .project-main .project-card-button:hover {
+            background-color: darken(#0096CC, 30%);
+        }
+
+/* home page */
 .home-body {
     display: grid;
     grid-template-columns: 2fr 1fr;
