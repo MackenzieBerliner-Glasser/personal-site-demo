@@ -3,9 +3,18 @@ $blue: #0096CC;
 $offwhite: #F5F8FA;
 $lightgrey: #AAAAAA;  
 
+body {
+    font-family: "Merriweather", sans-serif;
+    letter-spacing: .01rem;
+}
+
+/* header */
+h1 h3 h4 h5 h6 {
+    font-family: "Open Sans", sans-serif;
+}
+
 /* nav */
 .navbar {
-    /* grid-area: nav; */
     font-size: 18px;
     padding-bottom: 10px;   
 }
@@ -48,12 +57,6 @@ $lightgrey: #AAAAAA;
 }
 
 .navbar {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: rgba(0,0,0,.125);
-}
-
-#sample-form {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: rgba(0,0,0,.125);
@@ -116,10 +119,6 @@ $lightgrey: #AAAAAA;
 [type="checkbox"]:disabled + label {
   color: #aaa;
 }
-[type="checkbox"]:checked:focus + label:before,
-[type="checkbox"]:not(:checked):focus + label:before {
-  border: 2px dotted blue;
-}
 
 label:hover:before {
   border: 2px solid #4778d9!important;
@@ -137,11 +136,23 @@ footer {
         color:$blue;
     }
 }
-
+ 
 @media screen and (min-width: 700px) {
+
+    fieldset {
+        box-shadow: 0px 1px 5px #555;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: rgba(0,0,0,.125); 
+    }
+
      /* nav */
     .navbar {
-        grid-area: nav;
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
@@ -182,8 +193,12 @@ footer {
     }
 }
 
+#project-description {
+    margin: 0 auto;
+    text-align: left;
+}
+
 footer {
-    grid-area: footer;
     display: flex;
     color: $lightgrey;
     margin-top: 30px;
