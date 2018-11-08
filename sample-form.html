@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Site</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./build/css/form.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">MACK BERLINER-GLASSER</a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="./index.html" class="nav-links">HOME</a>
+            </li>
+            <li>
+                <a href="./projects.html" class="nav-links">PROJECTS</a>
+            </li>
+            <li>
+                <a href="./sample-form.html" class="nav-links">SAMPLE FORM</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">PHOTOS</a>
+            </li>
+        </ul>
+    </nav>
+    <form id="sample-form">
+        <div id="project-description">
+            <h3>Add A Project</h3>
+            <label for="title">Project Title:</label><br>
+            <input type="text" id="title" name="title"/><br>
+            <label for="description">Description:</label><br>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea><br>
+            <label for="image">Add a Image:</label><br>
+            <input type="file" name="image" id="image"><br>
+        </div>
+        <div class="project-options">
+            <h3>Select Frameworks/Languages/Tools</h3>
+            <p>
+                <input type="checkbox" name="react" id="react" value="react" />
+                <label for="react">React</label>
+            </p>
+            <p>
+                <input type="checkbox" id="angular"/>
+                <label for="angular">Angular</label>
+            </p>
+            <p>
+                <input type="checkbox" id="vue" name="vue" value="vue"/>
+                <label for="vue">Vue</label>
+            </p>
+            <p>
+                <input type="checkbox" id="javascript" name="javascript" value="javascript" />
+                <label for="javascript">Javascript</label>
+            </p>
+            <p>
+                    <input type="checkbox" id="html" name="html" value="html" />
+                    <label for="html">Html</label>
+            </p>
+            <p>
+                <input type="checkbox" id="css" name="css" value="css" />
+                <label for="css">CSS</label>
+            </p>
+        </div>
+        <div class="project-options">
+            <p>
+                <input type="checkbox" id="node" name="node" value="node" />
+                <label for="node">Node</label>
+            </p>
+             <p>
+                <input type="checkbox" id="express" name="express" value="express" />
+                <label for="express">Express</label>
+            </p>
+             <p>
+                <input type="checkbox" id="mongodb" name="mongodb" value="mongodb" />
+                <label for="mongodb">MongoDB</label>
+            </p>
+             <p>
+                <input type="checkbox" id="mongoose" name="mongoose" value="mongoose" />
+                <label for="mongoose">Mongoose</label>
+            </p>
+             <p>
+                <input type="checkbox" id="postgres" name="postgres" value="postgres" />
+                <label for="postgres">PostgreSQL</label>
+            </p>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+    <footer class="project-footer">
+        <div>
+            &copy; Mackenzie Berliner-Glasser
+        </div>
+        <div>
+            <a class="footer-links">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+            <a class="footer-links">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a class="footer-links">
+                <i class="fab fa-github-square"></i>
+            </a>
+            <a class="footer-links">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="footer-links">
+                <i class="fas fa-envelope-square"></i>
+            </a>
+        </div>
+        </footer>
+    <script type="module" src="js/main.mjs"></script>
+</body>
+</html>
