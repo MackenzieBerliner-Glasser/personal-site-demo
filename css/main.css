@@ -23,7 +23,6 @@ h2 {
     font-family: "Merriweather", sans-serif;
 }
 .main-header {
-        /* grid-area: header; */
         background: $offwhite;
         padding: 32px;
         border-bottom-style: solid;
