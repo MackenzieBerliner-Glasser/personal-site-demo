@@ -193,6 +193,43 @@ footer .footer-links:hover {
         color:#0096CC;
     }
 
+footer .bounce-icon{
+        display: inline-block;
+    }
+
+footer .bounce-icon:hover {
+            -webkit-animation: bounce 1.5s;
+                    animation: bounce 1.5s; 
+        }
+
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-15px);
+                transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-15px);
+                transform: translateY(-15px);
+    }
+}
+
+
+
+
+
 @media screen and (min-width: 700px) {
 /* project page */
 .project-body {
@@ -301,6 +338,12 @@ footer {
 }
     footer .footer-links:hover {
         color:#0096CC;
+    }
+    footer .transition:hover{
+        transition: all .2s linear; 
+                    -webkit-transition: all .2s linear; 
+                    -o-transition: all .2s linear; 
+                    -moz-transition: all .2s linear; 
     }
 
     .main-header {
