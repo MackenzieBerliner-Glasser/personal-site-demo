@@ -255,6 +255,16 @@ footer .bounce-icon:hover {
     }
 }
 
+.technologies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    grid-gap: 5px;
+    padding: 5px;
+}
+
+.technologies img{
+        width: 40px;
+    }
 
 
 
@@ -272,11 +282,6 @@ footer .bounce-icon:hover {
 
 .project-main {
     grid-area: content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 1rem;
-    padding: 1rem;
-
 }
   .project-image {
   width: 100%;
@@ -349,6 +354,7 @@ details {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "nav nav"
                          "header header"
+                         "tech tech"
                          "content side"
                          "footer footer"; 
     font-family: "Merriweather", sans-serif;
@@ -366,6 +372,18 @@ details {
 }
     .home-main h3 {
        margin-bottom: 1em; 
+    }
+
+.technologies {
+    grid-area: tech;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    grid-gap: 10px;
+    padding: 5px;
+}
+
+    .technologies img{
+        width: 75px;
     }
 
 aside {
