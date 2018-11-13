@@ -108,44 +108,57 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-gap: 1rem;
     padding: 1rem;
+}
+ .project-image {
+  height: 350px;   
+  width: 350px;
+}
 
-    .project-card{
-        display: grid;
-        box-shadow: 0px 1px 5px #555;
-        background-color: $offwhite;
-    }
-    
-    .project-card-title {
-        text-align: center;
-        font-size: 2rem;
-        padding: .5rem;
-    }
+.container {  
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 25px;
+  padding: 25px;
+}
 
-    .project-image {
-        margin: auto;
-        height: 150px;
-        width: 150px;
-    }
+@keyframes open-drawer {
+  0% { 
+    margin-top: 100px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
 
-    .project-card-description {
-        text-align: center;
-        padding: .5rem;
-        line-height: 1.6em;
-    }
+details {
+  overflow: hidden;
+  &[open] .details {
+    animation: open-drawer 1s;
+    z-index: -1;
+    padding: 0 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  summary {
+    background: #f1f1f1;
+    z-index: 1;
+    padding: 10px;
+  }
+  
+}
 
-    .project-card-button {
-        display: block;
-        background-color: $blue;
-        padding: 10px 20px;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        transition: .3s ease-out;
-        &:hover {
-            background-color: darken($blue, 30%);
-        }
 
-    }
+.button {
+  color: $black;
+  text-align: center;
+  border: 2px solid $black;
+  padding: 10px 0;
 }
 
 .project-footer {
@@ -212,6 +225,16 @@ footer {
     }
 }
 
+.technologies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    grid-gap: 5px;
+    padding: 5px;
+
+    img{
+        width: 40px;
+    }
+}
 
 
 
@@ -229,45 +252,56 @@ footer {
 
 .project-main {
     grid-area: content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 1rem;
-    padding: 1rem;
+}
+  .project-image {
+  width: 100%;
+}
 
-    .project-card{
-        display: grid;
-        box-shadow: 0px 1px 5px #555;
-        background-color: $offwhite;
-    }
-    
-    .project-card-title {
-        font-size: 2rem;
-        padding: .5rem;
-    }
+.container {  
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 25px;
+  padding: 25px;
+}
 
-    .project-image {
-        height: 150px;
-        width: 150px;;
-    }
+@keyframes open-drawer {
+  0% { 
+    margin-top: 100px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
 
-    .project-card-description {
-        padding: .5rem;
-        line-height: 1.6em;
-    }
+details {
+  overflow: hidden;
+  &[open] .details {
+    animation: open-drawer 1s;
+    z-index: -1;
+    padding: 0 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  summary {
+    background: #f1f1f1;
+    z-index: 1;
+    padding: 10px;
+  }
+  
+}
 
-    .project-card-button {
-        display: block;
-        background-color: $blue;
-        padding: 10px 20px;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        transition: .3s ease-out;
-        &:hover {
-            background-color: darken($blue, 30%);
-        }
 
-    }
+.button { 
+  color: $black;  
+  text-align: center;
+  border: 2px solid $black;
+  padding: 10px 0;
 }
 
 /* home page */
@@ -276,6 +310,7 @@ footer {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "nav nav"
                          "header header"
+                         "tech tech"
                          "content side"
                          "footer footer"; 
     font-family: "Merriweather", sans-serif;
@@ -292,6 +327,18 @@ footer {
     border-bottom-color: rgba(0,0,0,.125);
     h3 {
        margin-bottom: 1em; 
+    }
+}
+
+.technologies {
+    grid-area: tech;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    grid-gap: 10px;
+    padding: 5px;
+
+    img{
+        width: 75px;
     }
 }
 

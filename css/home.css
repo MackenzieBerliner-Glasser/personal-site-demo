@@ -1,121 +1,251 @@
+
 a {
-    text-decoration: none;
-    &:visited{
-        color: #222229;
+        text-decoration: none;
+        &:visited{
+            color: #222229;
+        }
     }
-}
 
-h1 {
-    color: #FFF;
-    letter-spacing: .01rem;
+    h1 {
+        color: #FFF;
+        letter-spacing: .01rem;
+        text-align: center;
+        font-size: 3rem;
+        margin-top: .5rem;
+        margin-bottom: .2rem;
+        animation: fadein 2s;
+            -moz-animation: fadein 2s; 
+            -webkit-animation: fadein 2s; 
+            -o-animation: fadein 2s; 
+    }
+
+    h2, h3{
+        color: #FFF;
+        letter-spacing: .01rem;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: .5rem;
+        margin-bottom: 1.5rem;
+        animation: fadein 2s;
+            -moz-animation: fadein 2s;
+            -webkit-animation: fadein 2s; 
+            -o-animation: fadein 2s; 
+    }
+
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-moz-keyframes fadein { /* Firefox */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-o-keyframes fadein { /* Opera */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .scene {
+    perspective: 1000;
+    width: 10em;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-left: -5em;
+    margin-top: -5em;
+    }
+
+    .cube {
+    color: #ccc;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+        transform-style: preserve-3d;
+    transform-origin: 100% 50%;
+    width: 10em;
+    height: 4em;
+    
+    &:hover {
+        transform: rotateX(-90deg);
+    }
+    }
+
+    .side {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    height: 4em;
+    width: 10em;
     text-align: center;
-    font-size: 3rem;
-    margin-top: 10rem;
-    margin-bottom: .5rem;
-    animation: fadein 2s;
-        -moz-animation: fadein 2s; 
-        -webkit-animation: fadein 2s; 
-        -o-animation: fadein 2s; 
-}
+    text-transform: uppercase;
+    padding-top: 1.5em;
+    }
 
-h2 {
-    color: #FFF;
-    letter-spacing: .01rem;
+    .top {
+    background: #fff;
+    color: #222229;
+    transform: rotateX(90deg) translate3d(0, 0, 2em);
+    }
+
+    .front {
+    background: #222229;
+    color: #fff;
+    box-shadow: inset 0 0 0 5px #fff;
+    transform: translate3d(0, 0, 2em);
+    }
+
+    body {
+        background: url("https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/166892.jpg") no-repeat center center fixed;
+        background-size: cover;
+        font-family: "Open Sans", sans-serif;
+        opacity: .70;
+    }
+
+@media screen and (min-width: 700px) {
+
+    a {
+        text-decoration: none;
+        &:visited{
+            color: #222229;
+        }
+    }
+
+    h1 {
+        color: #FFF;
+        letter-spacing: .01rem;
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 8rem;
+        margin-bottom: .5rem;
+        animation: fadein 2s;
+            -moz-animation: fadein 2s; 
+            -webkit-animation: fadein 2s; 
+            -o-animation: fadein 2s; 
+    }
+
+    h2, h3, {
+        color: #FFF;
+        letter-spacing: .01rem;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: .5rem;
+        margin-bottom: 3rem;
+        animation: fadein 2s;
+            -moz-animation: fadein 2s;
+            -webkit-animation: fadein 2s; 
+            -o-animation: fadein 2s; 
+    }
+
+    span {
+        color: #fff;
+    }
+
+
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-moz-keyframes fadein { /* Firefox */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-o-keyframes fadein { /* Opera */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .scene {
+    perspective: 1000;
+    width: 10em;
+    top: 90%;
+    left: 50%;
+    margin-left: -5em;
+    margin-top: -5em;
+    }
+
+    .cube {
+    color: #ccc;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+        transform-style: preserve-3d;
+    transform-origin: 100% 50%;
+    width: 10em;
+    height: 4em;
+    
+    &:hover {
+        transform: rotateX(-90deg);
+    }
+    }
+
+    .side {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    height: 4em;
+    width: 10em;
     text-align: center;
-    font-size: 1.5rem;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    animation: fadein 2s;
-        -moz-animation: fadein 2s;
-        -webkit-animation: fadein 2s; 
-        -o-animation: fadein 2s; 
-}
+    text-transform: uppercase;
+    padding-top: 1.5em;
+    }
 
-@keyframes fadein {
-    from {
-        opacity:0;
+    .top {
+    background: #fff;
+    color: #222229;
+    transform: rotateX(90deg) translate3d(0, 0, 2em);
     }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
-.scene {
-  perspective: 1000;
-  width: 10em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -5em;
-  margin-top: -5em;
-}
+    .front {
+    background: #222229;
+    color: #fff;
+    box-shadow: inset 0 0 0 5px #fff;
+    transform: translate3d(0, 0, 2em);
+    }
 
-.cube {
-  color: #ccc;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
-	transform-style: preserve-3d;
-  transform-origin: 100% 50%;
-  width: 10em;
-  height: 4em;
-  
-  &:hover {
-    transform: rotateX(-90deg);
-  }
-}
-
-.side {
-  box-sizing: border-box;
-  position: absolute;
-  display: inline-block;
-  height: 4em;
-  width: 10em;
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 1.5em;
-}
-
-.top {
-  background: #fff;
-  color: #222229;
-  transform: rotateX(90deg) translate3d(0, 0, 2em);
-}
-
-.front {
-  background: #222229;
-  color: #fff;
-  box-shadow: inset 0 0 0 5px #fff;
-  transform: translate3d(0, 0, 2em);
-}
-
-body {
-	background: url("https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/166892.jpg") no-repeat center center fixed;
-	background-size: cover;
-    font-family: "Open Sans", sans-serif;
-    opacity: .70;
+    body {
+        background: url("https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/166892.jpg") no-repeat center center fixed;
+        background-size: cover;
+        font-family: "Open Sans", sans-serif;
+        opacity: .70;
+    }
 }
